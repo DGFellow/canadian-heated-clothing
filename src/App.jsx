@@ -1,5 +1,6 @@
-import React, { useState, createContext, useContext } from 'react';
+import React, { useState, useEffect, createContext, useContext } from 'react';
 import { ShoppingCart, User, Menu, X, Flame, Search } from 'lucide-react';
+import { supabase } from './lib/supabase';
 
 // Cart Context
 const CartContext = createContext();
@@ -107,7 +108,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center gap-2 text-xl font-bold">
             <Flame className="text-orange-500" />
-            <span>CanadianEcom</span>
+            <span>Canadian Heated</span>
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
